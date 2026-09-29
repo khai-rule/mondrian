@@ -7,7 +7,9 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "preview": "vite preview",
-    "test": "vitest run",
+    "test": "vitest run && bun test server",
+    "api": "bun --watch server/index.ts",
+    "start": "bun run build && bun server/index.ts",
     "type-check": "tsc -b --noEmit"
   },
   "dependencies": {
@@ -15,6 +17,7 @@
     "react-dom": "^19.2.8"
   },
   "devDependencies": {
+    "@types/bun": "^1.4.2",
     "@types/node": "^24.13.3",
     "@types/react": "^19.2.18",
     "@types/react-dom": "^19.2.7",
